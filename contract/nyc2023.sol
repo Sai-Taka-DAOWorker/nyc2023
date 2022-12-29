@@ -47,7 +47,6 @@ contract WagmiErc1155 is ERC1155, Ownable, ERC1155Burnable, ERC1155Supply {
         for (uint256 i = 0; i < accounts.length; ++i) {
             address to = accounts[i];
             if(_isMint[to] == false) {
-                // balance[to] = id;
                 _isMint[to] = true;
                 _mint(to, id, amount, data);
             } else {
